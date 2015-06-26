@@ -1,0 +1,12 @@
+# Site settings
+title: Oriģinālas Dāvanas
+email: originalasdavanas@gmail.com
+description: Visādas oriģinālas dāvanas
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://originalas-davanas.me" # the base hostname & protocol for your site
+twitter_username: OriginalaDavana
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title
