@@ -3,10 +3,10 @@
   <channel>
     <title>Oriģinālas Dāvanas</title>
     <description>Visādas oriģinālas dāvanas</description>
-    <link>http://originalas-davanas.me/</link>
-    <atom:link href="http://originalas-davanas.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Jun 2015 00:02:02 +0300</pubDate>
-    <lastBuildDate>Sat, 27 Jun 2015 00:02:02 +0300</lastBuildDate>
+    <link>http://originalas-davanas.lv/</link>
+    <atom:link href="http://originalas-davanas.lv/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 27 Jun 2015 01:28:01 +0300</pubDate>
+    <lastBuildDate>Sat, 27 Jun 2015 01:28:01 +0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,8 +15,8 @@
 Accusantium aliquam animi aperiam atque cupiditate ea, id laborum minima minus possimus quae qui suscipit.&lt;/p&gt;
 </description>
         <pubDate>Fri, 26 Jun 2015 00:00:00 +0300</pubDate>
-        <link>http://originalas-davanas.me/Oriģināls banāns</link>
-        <guid isPermaLink="true">http://originalas-davanas.me/Oriģināls banāns</guid>
+        <link>http://originalas-davanas.lv/Oriģināls banāns</link>
+        <guid isPermaLink="true">http://originalas-davanas.lv/Oriģināls banāns</guid>
         
         
         <category>produkti</category>
@@ -28,8 +28,8 @@ Accusantium aliquam animi aperiam atque cupiditate ea, id laborum minima minus p
         <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet itaque iusto. Incidunt, repellendus vero.&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Jun 2015 00:00:00 +0300</pubDate>
-        <link>http://originalas-davanas.me/salati</link>
-        <guid isPermaLink="true">http://originalas-davanas.me/salati</guid>
+        <link>http://originalas-davanas.lv/salati</link>
+        <guid isPermaLink="true">http://originalas-davanas.lv/salati</guid>
         
         
         <category>produkti</category>
@@ -41,8 +41,8 @@ Accusantium aliquam animi aperiam atque cupiditate ea, id laborum minima minus p
         <description>&lt;p&gt;Accusantium aliquam animi aperiam atque cupiditate ea, id laborum minima minus possimus quae qui suscipit.&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Jun 2015 00:00:00 +0300</pubDate>
-        <link>http://originalas-davanas.me/kaaposti</link>
-        <guid isPermaLink="true">http://originalas-davanas.me/kaaposti</guid>
+        <link>http://originalas-davanas.lv/kaaposti</link>
+        <guid isPermaLink="true">http://originalas-davanas.lv/kaaposti</guid>
         
         
         <category>produkti</category>
