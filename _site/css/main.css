@@ -499,9 +499,31 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+video {
+  min-width: 100%;
+  width: auto;
+  min-height: 100vh; }
+
 /**
  * Site header
  */
+div.tempoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/sample_bg_2.jpg");
+  background-size: cover;
+  z-index: 10000; }
+  div.tempoverlay img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+
 .site-header {
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;

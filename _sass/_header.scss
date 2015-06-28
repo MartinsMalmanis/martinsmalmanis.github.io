@@ -1,6 +1,27 @@
 /**
  * Site header
  */
+
+div.tempoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/sample_bg_2.jpg");
+  background-size: cover;
+  z-index: 10000;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
 .site-header {
   border-bottom: 1px solid $grey-color-light;
   min-height: 56px;
