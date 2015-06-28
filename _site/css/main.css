@@ -513,9 +513,19 @@ div.tempoverlay {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("../img/sample_bg_2.jpg");
-  background-size: cover;
+  background: #111;
   z-index: 10000; }
+  div.tempoverlay h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 36%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fdfdfd;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: normal; }
   div.tempoverlay img {
     position: absolute;
     top: 0;
