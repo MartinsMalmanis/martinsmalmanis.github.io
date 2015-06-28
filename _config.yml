@@ -8,7 +8,7 @@ twitter_username: OriginalaDavana
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+# highlighter: rouge
 permalink: /:title
 
 #Default settings
