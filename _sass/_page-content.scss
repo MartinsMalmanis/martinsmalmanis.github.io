@@ -1,8 +1,30 @@
 /**
  * Page content
  */
+
+.home {
+  background: lightgreen;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(white, .9);
+  }
+
+  .first--fold {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: lightseagreen;
+  }
+}
+
 .page-content {
-  padding: 120px 0 50px;
+  padding: 0 0 50px;
 }
 
 .page-heading {
