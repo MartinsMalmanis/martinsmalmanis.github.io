@@ -5,29 +5,33 @@ layout: default
 <div class="home">
 
   <div class="first--fold">
-    <div class="overlay"></div>
+    <div class="overlay">
+      <h1>Prieks dāvināt prieku</h1>
+      <a href="#products"><img src="/img/down.svg" alt="down"/></a>
+    </div>
     <video loop autoplay>
-      <source src="img/ff1.mp4" type="video/mp4">
+      <source src="img/ff2.mp4" type="video/mp4">
     </video>
   </div>
 
-  <div>
-    <h1 class="page-heading">Posts</h1>
+  <div id="products" class="product--wrap">
 
     <ul class="post-list">
       {% for post in site.posts %}
       <li>
-        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        {{ post.excerpt }}
-
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="info--overlay">
+            <div>
+              <h2>{{ post.title }}</h2>
+              <span class="post-meta">{{ post.cena }}</span>
+            </div>
+          </div>
+          <img src="/img/{{ post.image }}" alt=""/>
+        </a>
       </li>
       {% endfor %}
     </ul>
-  </div>
 
-  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+  </div>
 
 </div>

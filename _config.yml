@@ -1,7 +1,7 @@
 # Site settings
 title: Oriģinālas Dāvanas
 email: martins@mdesign.lv
-description: Visādas oriģinālas dāvanas
+#description: Visādas oriģinālas dāvanas
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://originalas-davanas.lv" # the base hostname & protocol for your site
 twitter_username: OriginalaDavana

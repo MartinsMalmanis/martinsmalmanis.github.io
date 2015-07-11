@@ -2,45 +2,13 @@
  * Site header
  */
 
-div.tempoverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: $text-color;
-  z-index: 10000;
-
-  h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 36%;
-    margin: 0 auto;
-    text-align: center;
-    color: $background-color;
-    font-size: 1.5em;
-    font-style: italic;
-    font-weight: normal;
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
-
 .site-header {
-  border-bottom: 1px solid $grey-color-light;
-  min-height: 56px;
+  height: 60px;
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background: rgba(lightblue, .5);
+  //background: rgba(white, .95);
+  transition: .4s;
 }
 
 /**
@@ -73,7 +41,7 @@ div.tempoverlay {
   }
 
   img {
-    max-height: 60px;
+    max-height: 40px;
   }
 }
 
@@ -83,14 +51,35 @@ div.tempoverlay {
   height: auto;
 
   ul {
-    margin: 25% 0 0;
+    margin: 0;
 
     li {
       //background: lightgreen;
+      padding: 25px 0 0;
+      line-height: 1;
+      font-style: italic;
 
       &:nth-of-type(n+2) {
-        margin-left: 20px;
+        //margin-left: 20px;
         //background: red;
+
+        a {
+          border: none;
+          padding: 2px 0 2px 16px;
+        }
+      }
+
+      a {
+        //background: red;
+        padding: 2px 20px;
+        width: 100%;
+        height: 100%;
+        transition: .4s;
+        border-right: 1px solid $grey-color--brand;
+
+        &:hover {
+          color: $brand-color--3;
+        }
       }
     }
   }
@@ -139,12 +128,17 @@ div.tempoverlay {
 
     &:hover .trigger {
       display: block;
-      padding-bottom: 5px;
     }
 
     .page-link {
       display: block;
-      padding: 5px 10px;
+      padding: 0;
     }
   }
+}
+
+
+.a--highlight a {
+  color: $brand-color;
+  font-weight: bold;
 }

@@ -5,6 +5,16 @@
 
   <body>
 
+    <!--Facebook SDK  -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     {% include header.html %}
 
     <div class="page-content">
@@ -13,6 +23,43 @@
 
     {% include footer.html %}
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript">
+
+      /*niceScroll*/
+      $(document).ready(
+              function() {
+                $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "100", mousescrollstep: "60", zindex: "100"});
+              }
+      );
+
+      /*scrollDown events*/
+      $(document).scroll(function() {
+        var opacity = Math.min(($(document).scrollTop() / 500), 1);
+        var shadow = Math.min(($(document).scrollTop() / 500), .1);
+
+        $(".site-header").css({ "background": "rgba(255, 255, 255," + opacity + ")", "box-shadow": "0 5px 15px rgba(0, 0, 0, " + shadow + ")" });
+        /*console.log($(document).scrollTop());
+        console.log(opacity, shadow);*/
+      });
+
+      /*smooth scroll*/
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
   </body>
 
 </html>

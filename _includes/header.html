@@ -1,18 +1,10 @@
 {% capture location %}{{ page.url | split:'/' }}{% endcapture %}
 
-<!--<div class="tempoverlay">
-  <img src="img/logo.svg" alt=""/>
-  <h1>DRĪZ BŪS PIEEJAMS APMEKLĒTĀJIEM</h1>
-  <video loop autoplay>
-    <source src="img/video_bgj.mp4" type="video/mp4">
-  </video>
-</div>-->
-
 <header class="site-header">
 
   <div class="wrapper-header">
 
-    <a class="site-title" href="{{ site.baseurl }}/"><img src="img/logo.svg" alt=""/></a>
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="/img/logo.svg" alt="logo"/></a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -24,17 +16,21 @@
       </a>
 
       <ul class="trigger page-link">
-        {% for page in site.pages %}
+
+        {% assign pages = site.pages | sort:"weight" %}
+
+        {% for page in pages %}
           {% if page.title %}
 
             {% assign current = page.title | downcase %}
 
-        <li {% if location == current %} class="test-link" {% else %} class="nf" {% endif %}>
-          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
+            <li {% if location == current %} class="a--highlight" {% else %} class="" {% endif %}>
+              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            </li>
 
           {% endif %}
         {% endfor %}
+
       </ul>
     </nav>
 
