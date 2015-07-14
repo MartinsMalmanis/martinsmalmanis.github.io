@@ -1,0 +1,31 @@
+<div class="contact__wrap">
+    <div class="contact">
+        <h2 data-load="load">subscribe for updates</h2>
+        <p data-load="load">
+            What you see is just the beginning. We're working hard to bring more tours to our platform.
+            Leave us your e-mail, and we’ll keep you up-to-date with new tour releases.
+        </p>
+
+        <form id="contactform" method="POST" data-load="load">
+            <select>
+                {% for post in site.posts %}
+                <option value="{{ post.title }}">{{ post.title }}</option>
+                {% endfor %}
+            </select>
+            <input type="hidden" name="picture" role="uploadcare-uploader" data-tabs="file" data-images-only="true" data-image-shrink="1024x1024" data-clearable="true" data-system-dialog="true"/>
+
+            <input type="email" name="_replyto" placeholder="Your email">
+            <input type="hidden" name="_next" value="//localhost:4000/contact/" />
+            <input type="hidden" name="_subject" value="Website contact" />
+            <textarea name="message" placeholder="Your message"></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <div class="overlay"></div>
+    <video loop autoplay>
+        <source src="/img/contactsv.mp4" type="video/mp4">
+    </video>
+</div>

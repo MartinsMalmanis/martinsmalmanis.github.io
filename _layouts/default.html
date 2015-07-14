@@ -25,6 +25,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script src="https://ucarecdn.com/widget/2.3.4/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
+    <script type="text/javascript" src="/js/gmap.js"></script>
     <script type="text/javascript">
 
       /*niceScroll*/
@@ -59,6 +62,13 @@
           }
         });
       });
+
+      /*safer email*/
+      var contactForm = document.getElementById('contactform');
+      contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
+
+      /*form validation*/
+
     </script>
   </body>
 

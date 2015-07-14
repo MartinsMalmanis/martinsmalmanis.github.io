@@ -5,5 +5,7 @@ permalink: /contact/
 
 ---
 
+{% include contact.html %}
 
-Saņemies un [sūti epastu](mailto:{{ site.email }})
+<div id="google_map"></div>
+

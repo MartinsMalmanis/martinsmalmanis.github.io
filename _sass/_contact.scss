@@ -1,0 +1,74 @@
+.contact__wrap {
+  background: white;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .contact {
+    //background: lightseagreen;
+    padding: 25px;
+    position: absolute;
+    z-index: 150;
+    @include absolute__center(0, 0, 0, 0);
+    width: 60%;
+    height: 600px;
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 3em;
+      margin: 0 0 20px;
+    }
+
+    p {
+      width: 60%;
+      text-align: center;
+      margin: 0 auto;
+      border-top: 1px solid $grey-color;
+      padding-top: 20px;
+    }
+
+    form {
+      //background: lightcoral;
+      text-align: left;
+      width: 60%;
+      height: auto;
+      margin: 40px auto 0;
+
+      input {
+        height: 40px;
+      }
+
+      textarea {
+        height: 150px;
+      }
+
+      input,
+      textarea,
+      select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 0 0 10px;
+        font-size: 1.5em;
+        color: $grey-color;
+        background: rgba($background-color, .5);
+        border: none;
+        transition: .4s;
+
+        &:focus::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        &:focus::-moz-placeholder {
+          color: transparent;
+        }
+
+        &:focus {
+          background: $background-color;
+        }
+      }
+    }
+  }
+}

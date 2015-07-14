@@ -15,6 +15,27 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://originalas-davanas.lv/contact/">
   <link rel="alternate" type="application/rss+xml" title="Oriģinālas Dāvanas" href="http://originalas-davanas.lv/feed.xml" />
+
+  <script>
+    UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+    UPLOADCARE_LOCALE = 'lv';
+    UPLOADCARE_LOCALE_TRANSLATIONS = {
+      buttons: {
+        cancel: 'Atcelt',
+        remove: 'Noņemt',
+        choose: {
+          files: {
+            one: 'Izvēlēties failu',
+            other: 'Izvēlēties failus'
+          },
+          images: {
+            one: 'Izvēlēties attēlu',
+            other: 'Izvēlēties attēlus'
+          }
+        }
+      }
+    };
+  </script>
 </head>
 
 
@@ -89,12 +110,57 @@
     <div class="page-content">
       <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Contact</h1>
-  </header>
-
   <article class="post-content">
-    <p>Saņemies un <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#116;&#105;&#110;&#115;&#064;&#109;&#100;&#101;&#115;&#105;&#103;&#110;&#046;&#108;&#118;">sūti epastu</a></p>
+    <div class="contact__wrap">
+    <div class="contact">
+        <h2 data-load="load">subscribe for updates</h2>
+        <p data-load="load">
+            What you see is just the beginning. We're working hard to bring more tours to our platform.
+            Leave us your e-mail, and we’ll keep you up-to-date with new tour releases.
+        </p>
+
+        <form id="contactform" method="POST" data-load="load">
+            <select>
+                
+                <option value="Test">Test</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+                <option value="T-Krekla Dizains NR.1">T-Krekla Dizains NR.1</option>
+                
+            </select>
+            <input type="hidden" name="picture" role="uploadcare-uploader" data-tabs="file" data-images-only="true" data-image-shrink="1024x1024" data-clearable="true" data-system-dialog="true" />
+
+            <input type="email" name="_replyto" placeholder="Your email" />
+            <input type="hidden" name="_next" value="//localhost:4000/contact/" />
+            <input type="hidden" name="_subject" value="Website contact" />
+            <textarea name="message" placeholder="Your message"></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+
+    <div class="overlay"></div>
+    <video loop="" autoplay="">
+        <source src="/img/contactsv.mp4" type="video/mp4" />
+    </video>
+</div>
+
+<div id="google_map"></div>
+
 
   </article>
 
@@ -126,6 +192,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script src="https://ucarecdn.com/widget/2.3.4/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
+    <script type="text/javascript" src="/js/gmap.js"></script>
     <script type="text/javascript">
 
       /*niceScroll*/
@@ -160,6 +229,13 @@
           }
         });
       });
+
+      /*safer email*/
+      var contactForm = document.getElementById('contactform');
+      contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
+
+      /*form validation*/
+
     </script>
   </body>
 

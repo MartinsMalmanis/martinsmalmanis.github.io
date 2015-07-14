@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>T-Krekla Dizains NR.1</title>
+  <title>Test</title>
   <meta name="description" content="Kas tas ir?» Atšķirīgs no citiem T-kreklu masu spiedēju t-kreklu dizianiem - TAVS DIZAINS! Pasaki savas vēmes un mūsu dizainers uztaisīs speciālu dizainu tie...">
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
@@ -15,6 +15,27 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://originalas-davanas.lv/T-Krekla-NR.1">
   <link rel="alternate" type="application/rss+xml" title="Oriģinālas Dāvanas" href="http://originalas-davanas.lv/feed.xml" />
+
+  <script>
+    UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+    UPLOADCARE_LOCALE = 'lv';
+    UPLOADCARE_LOCALE_TRANSLATIONS = {
+      buttons: {
+        cancel: 'Atcelt',
+        remove: 'Noņemt',
+        choose: {
+          files: {
+            one: 'Izvēlēties failu',
+            other: 'Izvēlēties failus'
+          },
+          images: {
+            one: 'Izvēlēties attēlu',
+            other: 'Izvēlēties attēlus'
+          }
+        }
+      }
+    };
+  </script>
 </head>
 
 
@@ -90,8 +111,7 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">T-Krekla Dizains NR.1</h1>
-    <p class="post-meta">Jun 26, 2015</p>
+    <h1 class="post-title">Test</h1>
   </header>
 
   
@@ -134,6 +154,9 @@ Rezultāts?» Stilīgs pārsteigums ar praktisku pielietojumu, lai katru dienu a
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script src="https://ucarecdn.com/widget/2.3.4/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
+    <script type="text/javascript" src="/js/gmap.js"></script>
     <script type="text/javascript">
 
       /*niceScroll*/
@@ -168,6 +191,13 @@ Rezultāts?» Stilīgs pārsteigums ar praktisku pielietojumu, lai katru dienu a
           }
         });
       });
+
+      /*safer email*/
+      var contactForm = document.getElementById('contactform');
+      contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
+
+      /*form validation*/
+
     </script>
   </body>
 

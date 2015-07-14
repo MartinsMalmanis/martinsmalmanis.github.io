@@ -9,7 +9,9 @@ dl, dd, ol, ul, figure {
     text-decoration: none;
 }
 
-
+/** {
+    box-sizing: border-box;
+}*/
 
 /**
  * Basic styling
@@ -210,4 +212,9 @@ video {
     min-width: 100%;
     width: auto;
     min-height: 100vh;
+}
+
+#google_map {
+    width: 100%;
+    height: calc(100vh - 250px);
 }

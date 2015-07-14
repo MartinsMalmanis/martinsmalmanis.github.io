@@ -15,6 +15,27 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://originalas-davanas.lv/">
   <link rel="alternate" type="application/rss+xml" title="Oriģinālas Dāvanas" href="http://originalas-davanas.lv/feed.xml" />
+
+  <script>
+    UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+    UPLOADCARE_LOCALE = 'lv';
+    UPLOADCARE_LOCALE_TRANSLATIONS = {
+      buttons: {
+        cancel: 'Atcelt',
+        remove: 'Noņemt',
+        choose: {
+          files: {
+            one: 'Izvēlēties failu',
+            other: 'Izvēlēties failus'
+          },
+          images: {
+            one: 'Izvēlēties attēlu',
+            other: 'Izvēlēties attēlus'
+          }
+        }
+      }
+    };
+  </script>
 </head>
 
 
@@ -107,7 +128,7 @@
         <a href="/T-Krekla-NR.1">
           <div class="info--overlay">
             <div>
-              <h2>T-Krekla Dizains NR.1</h2>
+              <h2>Test</h2>
               <span class="post-meta">(Apmēram 15.00 EUR vienpusēja apdruka / 19.00 Eur divas puses)</span>
             </div>
           </div>
@@ -242,6 +263,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script src="https://ucarecdn.com/widget/2.3.4/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
+    <script type="text/javascript" src="/js/gmap.js"></script>
     <script type="text/javascript">
 
       /*niceScroll*/
@@ -276,6 +300,13 @@
           }
         });
       });
+
+      /*safer email*/
+      var contactForm = document.getElementById('contactform');
+      contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
+
+      /*form validation*/
+
     </script>
   </body>
 
