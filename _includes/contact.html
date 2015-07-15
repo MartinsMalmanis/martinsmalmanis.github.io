@@ -1,26 +1,27 @@
 <div class="contact__wrap">
     <div class="contact">
-        <h2 data-load="load">subscribe for updates</h2>
+        <h2 data-load="load">pasūti dāvanu vai tāpat vien sazinies ar mums</h2>
         <p data-load="load">
-            What you see is just the beginning. We're working hard to bring more tours to our platform.
-            Leave us your e-mail, and we’ll keep you up-to-date with new tour releases.
+            Šobrīd visas dāvanas Rīgas robežās tiek piegādātas ar kurjeru jau izgatavošanas dienā (piegādes maksa 5,50 EUR) un uz Latvijas lielajākajām pilsētām 3 dienu laikā (piegādes maksa atkarīga no pasta izdevumiem), taču drīzumā mēs plānojam atvērt savu ofisu, kur varēsiet saņemt dāvanas uz vietas un aplūkot citus paraugus.
+            Ir iespēja arī dāvanas saņemt bez piegādes maksas Vecmīlgrāvī, bet tad iepriekš jāvienojas.
         </p>
 
         <form id="contactform" method="POST" data-load="load">
-            <select>
+            <input type="email" name="_replyto" placeholder="* E-pasts" data-mail="input" novalidate="novalidate">
+            <input type="hidden" name="_next" value="{{ page.url | prepend: site.baseurl }}" />
+            <input type="hidden" name="_subject" value="" data-mail="caption" />
+            <textarea name="message" placeholder="* Ziņojums" data-text="area"></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <select data-select="select">
+                <option value="">Izvēlēties kategoriju</option>
                 {% for post in site.posts %}
                 <option value="{{ post.title }}">{{ post.title }}</option>
                 {% endfor %}
             </select>
             <input type="hidden" name="picture" role="uploadcare-uploader" data-tabs="file" data-images-only="true" data-image-shrink="1024x1024" data-clearable="true" data-system-dialog="true"/>
 
-            <input type="email" name="_replyto" placeholder="Your email">
-            <input type="hidden" name="_next" value="//localhost:4000/contact/" />
-            <input type="hidden" name="_subject" value="Website contact" />
-            <textarea name="message" placeholder="Your message"></textarea>
-            <input type="text" name="_gotcha" style="display:none" />
-
-            <input type="submit" value="Send">
+            <input type="submit" value="Sūtīt" data-submit="submit">
         </form>
     </div>
 

@@ -10,7 +10,7 @@
     position: absolute;
     z-index: 150;
     @include absolute__center(0, 0, 0, 0);
-    width: 60%;
+    width: auto;
     height: 600px;
 
     h2 {
@@ -18,8 +18,9 @@
       text-align: center;
       font-style: italic;
       font-weight: 400;
-      font-size: 3em;
+      font-size: 2.25em;
       margin: 0 0 20px;
+      color: $brand-color;
     }
 
     p {
@@ -28,6 +29,7 @@
       margin: 0 auto;
       border-top: 1px solid $grey-color;
       padding-top: 20px;
+      font-size: .8em;
     }
 
     form {
@@ -42,7 +44,7 @@
       }
 
       textarea {
-        height: 150px;
+        height: 120px;
       }
 
       input,
@@ -50,8 +52,8 @@
       select {
         width: calc(100% - 20px);
         padding: 10px;
-        margin: 0 0 10px;
-        font-size: 1.5em;
+        margin: 10px 0 0;
+        font-size: 1em;
         color: $grey-color;
         background: rgba($background-color, .5);
         border: none;
@@ -67,6 +69,65 @@
 
         &:focus {
           background: $background-color;
+        }
+      }
+
+      [data-select="select"] {
+        width: 100%;
+        margin-top: 4px;
+        height: 50px;
+        padding: 10px 10px 10px 6px;
+      }
+
+      [data-submit="submit"] {
+        width: 40%;
+        height: 52px;
+        margin: 10px 0 0;
+        background: rgba($brand-color--4, .5);
+        float: right;
+        color: $background-color;
+
+        &:hover {
+          background: $brand-color--4;
+        }
+      }
+
+      .uploadcare-widget {
+        //background: red;
+        width: 60%;
+        margin-top: 10px;
+
+        .uploadcare-widget-text {
+          padding-top: 10px;
+          //background: blue;
+          margin-right: 40px;
+        }
+
+        .uploadcare-widget-button {
+          background: #c3c3c3;
+          width: 30%;
+          height: 100%;
+          color: $background-color;
+          line-height: 2;
+          margin: 0;
+          border-radius: 0;
+          cursor: pointer;
+          white-space: nowrap;
+          padding: 10px;
+          transition: .4s;
+          text-align: center;
+        }
+
+        .uploadcare-widget-button:hover {
+          background: #b3b3b3;
+        }
+        .uploadcare-widget-button-open {
+          width: calc(100% - 20px);
+          background: rgba($brand-color--2, .5);
+          color: $background-color;
+        }
+        .uploadcare-widget-button-open:hover {
+          background: $brand-color--2;
         }
       }
     }

@@ -22,7 +22,7 @@
     UPLOADCARE_LOCALE_TRANSLATIONS = {
       buttons: {
         cancel: 'Atcelt',
-        remove: 'Noņemt',
+        remove: 'Atcelt',
         choose: {
           files: {
             one: 'Izvēlēties failu',
@@ -147,6 +147,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="/js/sweetalert.min.js"></script>
     <script src="https://ucarecdn.com/widget/2.3.4/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
     <script type="text/javascript" src="/js/gmap.js"></script>
@@ -189,8 +190,35 @@
       var contactForm = document.getElementById('contactform');
       contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
 
-      /*form validation*/
+      /*using select*/
+      $(function() {
+        $("select").on("change", function() {
+          var selected = $(this).find('option:selected').text().toLowerCase();
+          console.log(selected);
 
+          $('[data-mail="caption"]').attr({"value": selected})
+        }).trigger("change"); // initialise on load
+      });
+
+      /*form validation*/
+      $(function(){
+        $('[data-submit="submit"]').click(function(){
+          var emailField = $('[data-mail="input"]').val();
+          var emailFilter = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+          var textArea = $('[data-text="area"]').val();
+
+          if($.trim(emailField) === "" || textArea.length < 2 || $.trim(textArea) === ""){
+            swal("Kļūda!", "Lūdzu aizpildiet ar * atzīmētos laukus!", "error");
+            return false;
+          } else if(!emailFilter.test(emailField)){
+            swal("Kļūda!", "Lūdzu ievadiet derīgu epastu!", "error");
+            return false;
+          } else {
+            swal({title: "Ziņojums nosūtīts!", type: "success"});
+            return true
+          }
+        });
+      });
     </script>
   </body>
 
