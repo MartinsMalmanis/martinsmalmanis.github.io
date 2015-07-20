@@ -6,6 +6,47 @@
   background: $grey-color--brand;
   height: auto;
   padding: 40px 0 30px;
+  box-shadow: 0 -5px 10px rgba($text-color, .1);
+
+  div.footer--left {
+    //background: lightseagreen;
+    width: 50%;
+    float: left;
+  }
+
+  div.footer--right {
+    //background: lightblue;
+    width: 50%;
+    height: 100%;
+    float: left;
+
+    div {
+      float: right;
+      //background: red;
+      text-align: right;
+      margin-top: 0;
+
+      span {
+        margin: 10px 0 0;
+        font-size: .8em;
+
+        &:last-of-type {
+          margin-top: 10px;
+        }
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+
+      h4 {
+        display: inline-block;
+        margin: 0 0 0 10px;
+        font-size: 1.4em;
+        color: $brand-color;
+      }
+    }
+  }
 
   .footer--wrapper {
     font-size: 15px;
@@ -13,6 +54,7 @@
     //background: lightcoral;
     width: 90%;
     margin: 0 auto;
+    @extend %clearfix;
 
     span {
       display: block;

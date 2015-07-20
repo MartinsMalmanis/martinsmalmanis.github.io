@@ -1,37 +1,30 @@
 ---
 layout: default
+title: Sākums
+permalink: /sākums/
 ---
 
 <div class="home">
 
   <div class="first--fold">
     <div class="overlay">
-      <h1>Prieks dāvināt prieku</h1>
-      <a href="#products"><img src="/img/down.svg" alt="down"/></a>
-    </div>
-    <video loop autoplay>
-      <source src="img/ff2.mp4" type="video/mp4">
-    </video>
-  </div>
+      <div class="ffcenter">
+        <img src="/img/logo.svg" alt="logo"/>
+        <h1>Prieks dāvināt Prieku</h1>
+      </div>
 
-  <div id="products" class="product--wrap">
-
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <div class="info--overlay">
-            <div>
-              <h2>{{ post.title }}</h2>
-              <span class="post-meta">{{ post.cena }}</span>
-            </div>
-          </div>
-          <img src="/img/{{ post.image }}" alt=""/>
+      <div>
+        <a href="#products">
+          <h3>Apskatīt dāvanas</h3>
+          <img src="/img/down.svg" alt="down"/>
         </a>
-      </li>
-      {% endfor %}
-    </ul>
-
+      </div>
+    </div>
+    <!--<video loop autoplay>
+      <source src="img/ff2.mp4" type="video/mp4">
+    </video>-->
   </div>
+
+  {% include productBlock.html %}
 
 </div>

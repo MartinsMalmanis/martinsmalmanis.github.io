@@ -15,6 +15,11 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
+    <!--<div class="loader">
+      <img src="/img/logo.svg" alt="logo"/>
+      <div class="loader--animation"><span></span><span></span><span></span><span></span></div>
+    </div>-->
+
     {% include header.html %}
 
     <div class="page-content">
@@ -25,11 +30,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="/js/lightGallery.min.js"></script>
+    <script type="text/javascript" src="/js/lightGalleryCustom.js"></script>
     <script type="text/javascript" src="/js/sweetalert.min.js"></script>
     <script src="https://ucarecdn.com/widget/2.3.4/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
     <script type="text/javascript" src="/js/gmap.js"></script>
     <script type="text/javascript">
+
+
+      /*laoder*/
+      $(window).load(function() {
+        // Animate loader off screen
+        $(".loader").delay(300).fadeOut("slow");
+      });
 
       /*niceScroll*/
       $(document).ready(
@@ -38,12 +52,18 @@
               }
       );
 
+      /*after refresh send to top*/
+      $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+      });
+
       /*scrollDown events*/
       $(document).scroll(function() {
         var opacity = Math.min(($(document).scrollTop() / 500), 1);
         var shadow = Math.min(($(document).scrollTop() / 500), .1);
 
         $(".site-header").css({ "background": "rgba(255, 255, 255," + opacity + ")", "box-shadow": "0 5px 15px rgba(0, 0, 0, " + shadow + ")" });
+        $('.laiksUnTel, .site-title').css({ "opacity": opacity});
         /*console.log($(document).scrollTop());
         console.log(opacity, shadow);*/
       });
@@ -96,6 +116,17 @@
             return true
           }
         });
+      });
+
+      /*doc rdy*/
+      $(function(){
+        window.onload = function(){
+          $('[data-load]').each(function(i){
+            setTimeout(function(){
+              $('[data-load]').eq(i).css({ "transform": "translateY(0)"})
+            }, 100 * (i+1))
+          });
+        }
       });
     </script>
   </body>

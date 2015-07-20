@@ -13,17 +13,18 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #260500;
-$brand-color--2:   #35404f;
-$brand-color--3:   #f72200;
-$brand-color--4:   #18a5d0;
+$text-color:        #111;
+$background-color:  #fdfdfd;
+$brand-color:       #260500;
+$brand-color--2:    #35404f;
+$brand-color--3:    #f72200;
+$brand-color--4:    #FF9900;
 
-$grey-color:       #828282;
-$grey-color--brand:#f0f1ee;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+
+$grey-color--brand: #f0f1ee;
+$grey-color:        #828282;
+$grey-color-light:  lighten($grey-color, 40%);
+$grey-color-dark:   darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
@@ -60,11 +61,16 @@ $on-laptop:        800px;
 @import
         "normalize",
         "base",
+        "loader",
         "header",
         "page-content",
         "footer",
         "posts",
+        "productBlock",
         "contact",
+        "about",
+        "overlayNdown",
+        "lightGalery",
         "sweetalert",
         "syntax-highlighting"
 ;

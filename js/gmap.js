@@ -5,7 +5,7 @@ var map;
 
 function initialize() {
     var mapOptions = {
-        zoom: 15,
+        zoom: 14,
         center: Pointer,
         navigationControl: true,
         mapTypeControl: false,

@@ -1,0 +1,136 @@
+.product--wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding: 90px 0 60px;
+  //background: lightseagreen;
+  height: auto;
+  position: relative;
+  @extend %clearfix;
+
+  .product--block {
+    background: $background-color;
+    width: 48%;
+    height: auto;
+    float: left;
+    margin-bottom: 30px;
+    text-align: center;
+    @extend %clearfix;
+    box-shadow: 3px 3px 10px rgba($text-color, .1);
+
+    &:nth-of-type(even){
+      float: right;
+    }
+
+    .product--thumbs {
+      width: 220px;
+      height: 300px;
+      overflow: hidden;
+      float: left;
+      position: relative;
+
+      .thumb_overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        background: rgba($text-color, .25);
+        opacity: 0;
+        transition: .4s;
+
+        img {
+          display: block;
+          position: absolute;
+          width: 50%;
+          @include absolute__center(0, 0, 0, 0)
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .thumb_overlay {
+          opacity: 1;
+        }
+      }
+
+      ul {
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+
+        li {
+          display: none;
+
+          &:first-of-type {
+            display: block;
+          }
+
+          img {
+            transition: .4s;
+          }
+        }
+      }
+    }
+
+    .product--info {
+      float: left;
+      //background: lightcoral;
+      padding: 20px;
+      width: calc(100% - 260px);
+      height: 250px;
+      text-align: left;
+
+      h6 {
+        font-size: 1.25em;
+        color: $brand-color;
+        margin: 0;
+        //background-color: #009926;
+      }
+
+      h4 {
+        font-size: .8em;
+        color: $text-color;
+        margin-bottom: 5px;
+        //background-color: #0086B3;
+      }
+
+      p {
+        font-size: .8em;
+        display: block;
+        //background: lightblue;
+        height: 90px;
+        margin-bottom: 0;
+        color: $grey-color;
+
+        span {
+          color: $brand-color;
+          font-weight: bold;
+        }
+
+        &:last-of-type {
+          height: 70px;
+          color: $brand-color--2;
+          margin-bottom: 10px;
+        }
+      }
+
+      a {
+        background: rgba($brand-color--3, .75);
+        color: $background-color;
+        display: block;
+        width: 140px;
+        text-align: center;
+        margin: 0 0 0 auto;
+        padding: 6px;
+        transition: .4s;
+
+        &:hover {
+          background: $brand-color--3;
+        }
+      }
+    }
+  }
+}

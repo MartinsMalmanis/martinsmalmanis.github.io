@@ -3,162 +3,39 @@
  */
 
 .home {
-  //background: $background-color;
+  background: #e7e8e5;
 
   .first--fold {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    //background: lightseagreen;
-  }
-}
+    background: url("../img/ffbg.jpg");
+    background-size: cover;
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background: rgba(white, .8);
-
-  h1 {
-    position: absolute;
-    @include absolute__center(5%, 0, 0, 0);
-    width: 80%;
-    height: 10%;
-    text-align: center;
-    //background: red;
-    text-transform: uppercase;
-    color: $brand-color;
-    font-weight: 600;
-  }
-
-  a {
-    width: 48px;
-    height: 48px;
-    display: block;
-    position: absolute;
-    @include absolute__center(84%, 0, 0, 0);
-    padding: 50px;
-    animation: upanddown 2s infinite ease-in-out;
-    -webkit-animation: upanddown 2s infinite ease-in-out;
-
-    @keyframes upanddown {
-      0%      {  transform: translateY(0)  }
-      50%     {  transform: translateY(-20px)  }
-      100%    {  transform: translateY(0)  }
-    }
-
-    @-webkit-keyframes upanddown {
-      0%      {  transform: translateY(0)  }
-      50%     {  transform: translateY(-20px)  }
-      100%    {  transform: translateY(0)  }
-    }
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
-}
-
-.page-content {
-  padding: 0;
-}
-
-.page-heading {
-  font-size: 20px;
-}
-
-.product--wrap {
-  width: auto;
-  margin: 0 auto;
-  padding: 50px 0;
-  background: $background-color;
-}
-
-.post-list {
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-  @extend %clearfix;
-
-  > li {
-    background: white;
-    width: 20%;
-    height: auto;
-    margin: 20px 10px 0;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    line-height: 0;
-    border: 1px solid $grey-color-light;
-    transition: .4s;
-
-    &:hover .info--overlay {
-      opacity: 1;
-      transform: scale(1);
-      z-index: 10;
-    }
-
-    &:hover img {
-      transform: scale(1.25);
-      -webkit-filter: blur(4px);
-      filter: blur(4px);
-    }
-
-    .info--overlay {
+    .ffcenter {
+      //background: red;
       position: absolute;
-      top: 0;
-      left: 0;
+      @include absolute__center(0, 0, 0, 0);
       width: 100%;
-      height: 100%;
-      background: rgba($background-color, .75);
-      opacity: 0;
-      transform: scale(0);
-      transition: .4s;
+      height: 300px;
 
-      div {
-        position: absolute;
-        top: 0;
-        bottom: -10%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        //background: red;
-        height: 24%;
-        width: 80%;
-
-        h2 {
-          color: $brand-color;
-          line-height: 1em;
-        }
-
-        span {
-          color: $text-color;
-          line-height: 1em;
-        }
+      h1 {
+        text-align: center;
+        font-size: 5em;
+        color: $brand-color;
+        font-family: 'Allura', cursive;
       }
-    }
-
-    a {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
 
       img {
-        min-width: 100%;
-        min-height: 100%;
-        height: auto;
-        width: auto;
-        transition: .4s;
+        width: 30%;
+        margin: 0 auto;
+        //background: red;
+        display: block;
       }
     }
-  }
-}
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
+    .overlay {
+      background: none;
+    }
+  }
 }

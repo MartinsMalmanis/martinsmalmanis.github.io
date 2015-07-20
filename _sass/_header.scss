@@ -11,6 +11,38 @@
   transition: .4s;
 }
 
+.laiksUnTel {
+  position: absolute;
+  //background: white;
+  width: 400px;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2px 0 0;
+  opacity: 0;
+
+  p {
+    margin: -3px 0 0;
+    font-size: .8em;
+
+    span {
+      font-size: inherit;
+      color: $brand-color--3;
+    }
+  }
+
+  span {
+    color: $grey-color;
+    font-size: 1.5em;
+
+    a {
+      color: $brand-color--3;
+    }
+  }
+}
+
 /**
  * Wrapper
  */
@@ -21,19 +53,14 @@
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
-
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-  }
+  //background: lightseagreen;
 }
 
 .site-title {
   margin-bottom: 0;
   float: left;
   padding: 10px 0;
+  opacity: 0;
 
   &,
   &:visited {
@@ -47,11 +74,13 @@
 
 .site-nav {
   float: right;
-  //background: lightcoral;
-  height: auto;
+  height: 100%;
+  background: rgba(white, .9);
+  padding: 0 15px 15px 12px;
 
   ul {
     margin: 0;
+    //background: lightcoral;
 
     li {
       //background: lightgreen;
@@ -59,19 +88,16 @@
       line-height: 1;
       font-style: italic;
 
-      &:nth-of-type(n+2) {
-        //margin-left: 20px;
-        //background: red;
+      &:last-of-type {
 
         a {
           border: none;
-          padding: 2px 0 2px 16px;
         }
       }
 
       a {
         //background: red;
-        padding: 2px 20px;
+        padding: 2px 15px;
         width: 100%;
         height: 100%;
         transition: .4s;
@@ -91,49 +117,6 @@
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
-  }
-
-  @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: 30px;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
-
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg {
-        width: 18px;
-        height: 15px;
-
-        path {
-          fill: $grey-color-dark;
-        }
-      }
-    }
-
-    .trigger {
-      clear: both;
-      display: none;
-    }
-
-    &:hover .trigger {
-      display: block;
-    }
-
-    .page-link {
-      display: block;
-      padding: 0;
-    }
   }
 }
 

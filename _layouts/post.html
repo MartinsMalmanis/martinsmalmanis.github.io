@@ -7,9 +7,11 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  {% if page.image %}
-    <img src="/img/{{ page.image }}"/>
-  {% endif %}
+  {% for item in page.image--content %}
+    <div class="test">
+      <img src="/img/{{ item.image }}" alt=""/>
+    </div>
+  {% endfor %}
 
   <article class="post-content">
     {{ content }}

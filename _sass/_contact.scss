@@ -1,5 +1,5 @@
 .contact__wrap {
-  background: white;
+  background: url("../img/blurbgstill.jpg");
   width: 100%;
   height: 100vh;
   position: relative;
@@ -11,7 +11,7 @@
     z-index: 150;
     @include absolute__center(0, 0, 0, 0);
     width: auto;
-    height: 600px;
+    height: 540px;
 
     h2 {
       text-transform: uppercase;
@@ -52,7 +52,7 @@
       select {
         width: calc(100% - 20px);
         padding: 10px;
-        margin: 10px 0 0;
+        margin: 16px 0 0;
         font-size: 1em;
         color: $grey-color;
         background: rgba($background-color, .5);
@@ -73,34 +73,39 @@
       }
 
       [data-select="select"] {
-        width: 100%;
+        width: calc(40% - 8px);
         margin-top: 4px;
-        height: 50px;
+        height: 52px;
         padding: 10px 10px 10px 6px;
+
+        &:hover {
+          cursor: pointer;
+          background: $background-color;
+        }
       }
 
       [data-submit="submit"] {
-        width: 40%;
+        width: 20%;
         height: 52px;
         margin: 10px 0 0;
-        background: rgba($brand-color--4, .5);
+        background: rgba($brand-color--3, .5);
         float: right;
         color: $background-color;
 
         &:hover {
-          background: $brand-color--4;
+          background: $brand-color--3;
         }
       }
 
       .uploadcare-widget {
         //background: red;
-        width: 60%;
+        width: 40%;
         margin-top: 10px;
 
         .uploadcare-widget-text {
-          padding-top: 10px;
+          padding: 10px 0 0 20px;
           //background: blue;
-          margin-right: 40px;
+          margin-right: 20px;
         }
 
         .uploadcare-widget-button {
@@ -132,4 +137,9 @@
       }
     }
   }
+}
+
+[data-load] {
+  transform: translateY(110vh);
+  transition: 1s;
 }

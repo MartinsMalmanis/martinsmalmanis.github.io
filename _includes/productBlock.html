@@ -1,0 +1,31 @@
+<div id="products" class="product--wrap">
+
+    {% for post in site.posts %}
+
+    <div class="product--block">
+
+        <div class="product--thumbs">
+            <ul class="lightGallery" class="post-list">
+                {% for item in post.images %}
+                <li data-src="/img/{{ item.image }}">
+                    <div class="thumb_overlay"><img src="/img/eye.svg" alt="eye"/></div>
+                    {% if item.thumb %}
+                    <img src="/img/{{ item.thumb }}" />
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="product--info">
+            <h6>{{ post.title }}</h6>
+            <h4>{{ post.cena }}</h4>
+            <p>{{ post.apraksts }}</p>
+            <p><span>Pasūtījumam vajadzīgs:</span> {{ post.kaa_pasuutiit }}</p>
+            <a href="{{ site.baseurl }}/kontakti/">Sākt pasūtījumu</a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
