@@ -51,12 +51,21 @@
         $(".loader").delay(300).fadeOut("slow");
       });
 
+      /*toggle menu*/
+      $('.hamburger').click(function(){
+        $('.site-nav--mobile, .close-button').fadeIn('fast');
+        $('.hamburger').fadeOut('fast');
+      });
+
+      $('.close-button').click(function(){
+        $('.site-nav--mobile, .close-button').fadeOut('fast');
+        $('.hamburger').fadeIn('fast');
+      });
+
       /*niceScroll*/
-      $(document).ready(
-              function() {
-                $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "100", mousescrollstep: "60", zindex: "100"});
-              }
-      );
+      $(document).ready(function(){
+        $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "100", mousescrollstep: "60", zindex: "100"});
+      });
 
       /*after refresh send to top*/
       $(window).on('beforeunload', function() {
@@ -69,7 +78,10 @@
         var shadow = Math.min(($(document).scrollTop() / 500), .1);
 
         $(".site-header").css({ "background": "rgba(255, 255, 255," + opacity + ")", "box-shadow": "0 5px 15px rgba(0, 0, 0, " + shadow + ")" });
-        $('.laiksUnTel, .site-title').css({ "opacity": opacity});
+        $('.laiksUnTel, .site-title').css({ "opacity": opacity });
+        if($(window).width() < 1000){
+          $('.laiksUnTel').css({ "box-shadow": "0 -5px 15px rgba(0, 0, 0, " + shadow + ")" });
+        }
         /*console.log($(document).scrollTop());
         console.log(opacity, shadow);*/
       });
@@ -98,7 +110,7 @@
       $(function() {
         $("select").on("change", function() {
           var selected = $(this).find('option:selected').text().toLowerCase();
-          console.log(selected);
+          //console.log(selected);
 
           $('[data-mail="caption"]').attr({"value": selected})
         }).trigger("change"); // initialise on load
@@ -122,17 +134,6 @@
             return true
           }
         });
-      });
-
-      /*doc rdy*/
-      $(function(){
-        window.onload = function(){
-          $('[data-load]').each(function(i){
-            setTimeout(function(){
-              $('[data-load]').eq(i).css({ "transform": "translateY(0)"})
-            }, 100 * (i+1))
-          });
-        }
       });
     </script>
   </body>

@@ -50,3 +50,12 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px){
+  .overlay {
+
+    a {
+      @include absolute__center(80%, 0, 0, 0);
+    }
+  }
+}

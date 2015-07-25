@@ -139,7 +139,69 @@
   }
 }
 
-[data-load] {
-  transform: translateY(110vh);
-  transition: 1s;
+@media screen and (max-width: 1400px){
+  .contact__wrap {
+    background: url("../img/blurbgstill.jpg");
+    width: 100%;
+    min-height: 800px;
+    height: auto;
+    position: relative;
+
+    .overlay {
+
+      a {
+        display: none;
+      }
+    }
+
+    .contact {
+      //background: lightseagreen;
+      padding: 25px;
+      position: absolute;
+      z-index: 150;
+      @include absolute__center(0, 0, 0, 0);
+      width: auto;
+      height: auto;
+
+      h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.25em;
+        margin: 50px 0 20px;
+        color: $brand-color;
+      }
+
+      p {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        border-top: 1px solid $grey-color;
+        padding-top: 20px;
+        font-size: .8em;
+      }
+
+      form {
+        //background: lightcoral;
+        text-align: left;
+        width: 90%;
+        height: auto;
+        margin: 40px auto 0;
+
+        [data-select="select"] {
+          width: calc(70% - 8px);
+        }
+
+        [data-submit="submit"] {
+          width: 30%;
+          margin: 4px 0 0;
+        }
+
+        .uploadcare-widget {
+          display: none;
+        }
+      }
+    }
+  }
 }

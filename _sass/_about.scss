@@ -29,8 +29,7 @@
 }
 
 .partners {
-  //background: lightseagreen;
-  background-size: cover;
+  background: white;
   width: 90%;
   margin: 0 auto;
   padding: 90px 0;
@@ -49,6 +48,59 @@
 
     img {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about__wrap {
+    background: $grey-color--brand;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    position: static;
+
+    .about {
+      padding: 70px 30px 30px;
+      margin: auto;
+      position: static;
+      width: auto;
+      height: auto;
+      background: none;
+
+      h2 {
+        color: $brand-color;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: $brand-color--2;
+        font-size: .9em;
+      }
+    }
+  }
+
+  .partners {
+    //background: green;
+    width: auto;
+    margin: 0 auto;
+    padding: 90px 0;
+    height: auto;
+    //min-height: 100vh;
+    position: relative;
+
+    a {
+      width: auto;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      float: none;
+      margin: 10px auto;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }

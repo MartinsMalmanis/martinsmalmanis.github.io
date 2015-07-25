@@ -1,11 +1,36 @@
 {% capture location %}{{ page.url | split:'/' }}{% endcapture %}
 
-<header class="site-header">
+<div class="laiksUnTel">
+  <span>+371 <a href="tel:+37127705555">2770 5555</a></span>
+  <p>E-pasts: <span>{{ site.email }}</span></p>
+</div>
 
-  <div class="laiksUnTel">
-    <span>+371 <a href="tel:+37127705555">2770 5555</a></span>
-    <p>E-pasts: <span>{{ site.email }}</span></p>
-  </div>
+<button class="hamburger">
+  <span></span><span></span><span></span>
+</button>
+
+<button class="close-button">&times;</button>
+
+<div class="site-nav--mobile">
+  <ul>
+    <li><a href="{{ site.baseurl }}/">Sākums</a></li>
+
+    {% assign pages = site.pages %}
+
+    {% for page in pages %}
+    {% if page.title %}
+
+    {% assign current = page.title | downcase %}
+    <li {% if location == current %} class="a--highlight" {% else %} class="" {% endif %}>
+      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    </li>
+
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<header class="site-header">
 
   <div class="wrapper-header">
 

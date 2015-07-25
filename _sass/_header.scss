@@ -1,7 +1,3 @@
-/**
- * Site header
- */
-
 .site-header {
   height: 60px;
   position: fixed;
@@ -12,9 +8,10 @@
 }
 
 .laiksUnTel {
-  position: absolute;
-  //background: white;
-  width: 400px;
+  position: fixed;
+  //background: green;
+  width: 300px;
+  height: 56px;
   left: 0;
   right: 0;
   top: 0;
@@ -22,6 +19,7 @@
   text-align: center;
   padding: 2px 0 0;
   opacity: 0;
+  z-index: 10000;
 
   p {
     margin: -3px 0 0;
@@ -43,9 +41,6 @@
   }
 }
 
-/**
- * Wrapper
- */
 .wrapper-header {
   max-width: 90%;
   margin-right: auto;
@@ -120,8 +115,170 @@
   }
 }
 
+.site-nav--mobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $grey-color--brand;
+  z-index: 100000;
+  text-align: center;
+  display: none;
+  overflow: hidden;
+
+  ul {
+    //background: red;
+    height: 50%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    @include absolute__center(0, 0, 0, 0);
+
+    li {
+      //background: blue;
+      display: block;
+      margin: 0 0 20px;
+
+      a{
+        //background: green;
+        padding: 20px 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        color: $brand-color--2;
+        transition: .4s;
+        font-size: 5vw;
+
+        &:hover {
+          background: $brand-color--4;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 21px;
+  border: none;
+  //background: red;
+  margin: 20px 20px 0 0;
+  padding: 0;
+  background: none;
+  display: none;
+
+  &:hover {
+
+    span {
+      background: $brand-color--4;
+    }
+  }
+
+  span {
+    background: $brand-color--2;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: block;
+    transition: .4s;
+
+    &:nth-of-type(1){
+      top: 0;
+    }
+    &:nth-of-type(2){
+      @include absolute__center(0, 0, 0, 0);
+    }
+    &:nth-of-type(3){
+      bottom: 0;
+    }
+  }
+}
+
+.close-button {
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  right: 0;
+  border: none;
+  //background: red !important;
+  margin: 0 24px 0 0;
+  padding: 0;
+  background: none;
+  display: none;
+  font-size: 2.5em;
+  color: $brand-color--2;
+  transition: .4s;
+
+  &:hover {
+    color: $brand-color--4;
+  }
+}
 
 .a--highlight a {
   color: $brand-color;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .site-header {
+  }
+
+  .laiksUnTel {
+    background: white;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto 0;
+    text-align: center;
+    padding: 0 0 5px;
+    opacity: 0;
+
+    p {
+      margin: -3px 0 0;
+      font-size: .8em;
+
+      span {
+        font-size: inherit;
+        color: $brand-color--3;
+      }
+    }
+
+    span {
+      color: $grey-color;
+      font-size: 1.5em;
+
+      a {
+        color: $brand-color--3;
+      }
+    }
+  }
+
+  .wrapper-header {
+    max-width: 90%;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .a--highlight a {
+    color: $brand-color;
+    font-weight: bold;
+  }
 }
