@@ -10,7 +10,7 @@
                 <li data-src="/img/{{ item.image }}">
                     <div class="thumb_overlay"><img src="/img/eye.svg" alt="eye"/></div>
                     {% if item.thumb %}
-                    <img src="/img/{{ item.thumb }}" />
+                    <img src="/img/{{ item.thumb }}" alt="{{ post.title }}" />
                     {% endif %}
                 </li>
                 {% endfor %}
