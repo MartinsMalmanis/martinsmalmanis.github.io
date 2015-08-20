@@ -1,8 +1,14 @@
-/*laoder*/
+//browsers =====================================================================================================
+var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
+var isFirefox = navigator.userAgent.indexOf('Firefox') > -1;
+
+
 $(window).load(function() {
     // Animate loader off screen
     $(".loader").delay(300).fadeOut("slow");
 });
+
 
 /*toggle menu*/
 $('.hamburger').click(function(){
@@ -10,10 +16,12 @@ $('.hamburger').click(function(){
     $('.hamburger').fadeOut('fast');
 });
 
+
 $('.close-button').click(function(){
     $('.site-nav--mobile, .close-button').fadeOut('fast');
     $('.hamburger').fadeIn('fast');
 });
+
 
 /*niceScroll*/
 $(document).ready(function(){
@@ -26,10 +34,12 @@ $(document).ready(function(){
     }
 });
 
+
 /*after refresh send to top*/
 $(function(){
     window.onunload = function(){ window.scrollTo(0,0); }
 });
+
 
 /*scrollDown events*/
 $(document).scroll(function() {
@@ -44,6 +54,7 @@ $(document).scroll(function() {
     /*console.log($(document).scrollTop());
      console.log(opacity, shadow);*/
 });
+
 
 /*smooth scroll*/
 $(function() {
@@ -61,9 +72,13 @@ $(function() {
     });
 });
 
+
 /*safer email*/
-var contactForm = document.getElementById('contactform');
-contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
+$(function(){
+    var contactForm = document.getElementById('contactform');
+    contactForm.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'originalas-davanas' + '.' + 'lv');
+});
+
 
 /*using select*/
 $(function() {
@@ -74,6 +89,7 @@ $(function() {
         $('[data-mail="caption"]').attr({"value": selected})
     }).trigger("change"); // initialise on load
 });
+
 
 /*form validation*/
 $(function(){
