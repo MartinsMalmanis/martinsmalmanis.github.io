@@ -217,6 +217,10 @@ video {
     video {
         display: none;
     }
+
+    html {
+        overflow: auto;
+    }
 }
 
 #google_map {

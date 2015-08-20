@@ -17,12 +17,18 @@ $('.close-button').click(function(){
 
 /*niceScroll*/
 $(document).ready(function(){
-    $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "100", mousescrollstep: "60", zindex: "100"});
+    if( $(window).width() > 1400 ){
+        if( (isChrome === true) || (isOpera === true) ){
+            $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "10", mousescrollstep: "36", cursorcolor: "#102734"});
+        } else {
+            $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "50", mousescrollstep: "40", cursorcolor: "#102734"});
+        }
+    }
 });
 
 /*after refresh send to top*/
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
+$(function(){
+    window.onunload = function(){ window.scrollTo(0,0); }
 });
 
 /*scrollDown events*/
