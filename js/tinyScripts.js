@@ -27,9 +27,9 @@ $('.close-button').click(function(){
 $(document).ready(function(){
     if( $(window).width() > 1400 ){
         if( (isChrome === true) || (isOpera === true) ){
-            $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "10", mousescrollstep: "36", cursorcolor: "#102734"});
+            $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "10", mousescrollstep: "36", cursorcolor: "#260500"});
         } else {
-            $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "50", mousescrollstep: "40", cursorcolor: "#102734"});
+            $("html").niceScroll({zindex: "10000", cursorborder: "none", scrollspeed: "50", mousescrollstep: "40", cursorcolor: "#260500"});
         }
     }
 });
