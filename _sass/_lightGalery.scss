@@ -353,7 +353,7 @@
   margin: auto;
   position: fixed;
   width: 100vw;
-  height: 400px;
+  height: 200px;
   z-index: 9;
   -webkit-backface-visibility: hidden;
   //background: red;
@@ -368,7 +368,7 @@
   //background-color: green;
   font-size: 16px;
   width: 50%;
-  height: 400px;
+  height: 200px;
   font-family: 'Slide-icons';
   color: rgba(white, .25);
   cursor: pointer;
@@ -576,7 +576,7 @@
   color: $grey-color;
   height: 28px;
   position: absolute;
-  right: 20px;
+  left: 20px;
   top: 20px;
   width: 28px;
   z-index: 1090;
