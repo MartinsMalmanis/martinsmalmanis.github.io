@@ -6,48 +6,4 @@
   left: 0;
   z-index: 100;
   background: rgba(white, .8);
-
-  a {
-    width: 260px;
-    height: 50px;
-    display: block;
-    position: absolute;
-    @include absolute__center(88%, 0, 0, 0);
-    padding: 20px;
-    animation: upanddown 2s infinite ease-in-out;
-    -webkit-animation: upanddown 2s infinite ease-in-out;
-    //background: red;
-
-    @keyframes upanddown {
-      0%      {  transform: translateY(0);  }
-      50%     {  transform: translateY(-10px)  }
-      100%    {  transform: translateY(0)  }
-    }
-
-    @-webkit-keyframes upanddown {
-      0%      {  transform: translateY(0)  }
-      50%     {  transform: translateY(-10px)  }
-      100%    {  transform: translateY(0)  }
-    }
-
-    h3 {
-      width: 100%;
-      height: auto;
-      text-align: center;
-      //background: red;
-      text-transform: uppercase;
-      color: $brand-color;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 1000px){
-  .overlay {
-
-    a {
-      @include absolute__center(80%, 0, 0, 0);
-    }
-  }
 }

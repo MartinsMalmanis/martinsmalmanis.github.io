@@ -1,29 +1,32 @@
 .about__wrap {
-  background: url("../img/aboutbg.jpg");
+  background: url("../img/aboutbg.jpg") fixed;
   background-size: cover;
   width: 100%;
   height: auto;
   min-height: 100vh;
   position: relative;
+  padding: 0;
 
   .about {
     background: rgba(white, .9);
-    padding: 25px;
+    padding: 50px 200px;
     position: absolute;
-    z-index: 150;
-    bottom: 50px;
-    left: 50px;
-    width: 40%;
-    height: auto;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 400px);
+    margin: 0 auto;
 
     h2 {
       color: $brand-color;
       font-style: italic;
       text-transform: uppercase;
+      font-size: 2em;
+      text-align: center;
     }
 
     p {
       color: $brand-color--2;
+      text-align: justify;
     }
   }
 }
@@ -32,19 +35,20 @@
   background: white;
   width: 90%;
   margin: 0 auto;
-  padding: 90px 0;
+  padding: 90px 0 50px;
   height: auto;
   //min-height: 100vh;
   position: relative;
   @extend %clearfix;
+  text-align: center;
 
   a {
     width: auto;
     max-width: 300px;
     height: auto;
-    display: block;
-    float: left;
-    margin: 10px;
+    display: inline-block;
+    float: none;
+    margin: 10px 10px 40px;
 
     img {
       width: 100%;
@@ -54,19 +58,20 @@
 
 @media screen and (max-width: 1000px) {
   .about__wrap {
-    background: $grey-color--brand;
+    background: url("../img/aboutbg.jpg") scroll;
+    background-size: cover;
     width: 100%;
     height: auto;
-    min-height: 0;
     position: static;
+    min-height: 0;
+    padding: 0;
 
     .about {
       padding: 70px 30px 30px;
       margin: auto;
-      position: static;
       width: auto;
       height: auto;
-      background: none;
+      position: relative;
 
       h2 {
         color: $brand-color;

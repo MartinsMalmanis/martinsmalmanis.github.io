@@ -1,5 +1,6 @@
 .contact__wrap {
-  background: url("../img/blurbgstill.jpg");
+  background: url("../img/blurbgstill.jpg") fixed;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -18,7 +19,7 @@
       text-align: center;
       font-style: italic;
       font-weight: 400;
-      font-size: 2.25em;
+      font-size: 2em;
       margin: 0 0 20px;
       color: $brand-color;
     }
@@ -141,7 +142,8 @@
 
 @media screen and (max-width: 1400px){
   .contact__wrap {
-    background: url("../img/blurbgstill.jpg");
+    background: url("../img/blurbgstill.jpg") scroll;
+    background-size: cover;
     width: 100%;
     min-height: 800px;
     height: auto;

@@ -49,6 +49,7 @@ $(document).scroll(function() {
     $(".site-header").css({ "background": "rgba(255, 255, 255," + opacity + ")", "box-shadow": "0 5px 15px rgba(0, 0, 0, " + shadow + ")" });
     $('.laiksUnTel, .site-title').css({ "opacity": opacity });
     if($(window).width() < 1000){
+        $('.site-header, .site-title').css({ "opacity": 0 });
         $('.laiksUnTel').css({ "box-shadow": "0 -5px 15px rgba(0, 0, 0, " + shadow + ")" });
     }
     /*console.log($(document).scrollTop());
