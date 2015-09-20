@@ -9,11 +9,10 @@
     background-size: cover;
 
     .ffcenter {
-      //background: red;
       position: absolute;
       @include absolute__center(0, 0, 0, 0);
       width: 100%;
-      height: 300px;
+      height: 340px;
 
       h1 {
         text-align: center;
@@ -27,6 +26,11 @@
         margin: 0 auto;
         //background: red;
         display: block;
+      }
+
+      .xp {
+        width: auto;
+        max-width: 10%;
       }
     }
 
@@ -44,7 +48,7 @@
       .ffcenter {
         //background: green;
         @include absolute__center(0, 0, 0, 0);
-        height: 200px;
+        height: 40vh;
 
         h1 {
           font-size: 10vw;
@@ -52,6 +56,10 @@
 
         img {
           width: 80%;
+        }
+
+        .xp {
+          max-width: 120px;
         }
       }
 
